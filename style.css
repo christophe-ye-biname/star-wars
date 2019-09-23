@@ -1,3 +1,17 @@
 body {
-    background-image: url(space.png)
+    background-image: url(space.png);
+    opacity: 1;
+}
+
+.conteneur {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    align-content: center;
+}
+
+h6 {
+    color: white;
+    grid-column: 2/2;
+    grid-row: 2/2;
 }
