@@ -1,49 +1,35 @@
         body {
-            background-image: url(space.png);
-            opacity: 1;
+        background-image: url(space.png);
+        opacity: 1;
+    }
+    
+    .conteneur {
+        /* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1 fr);*/
+        align-content: center;
+        transform: perspective(350px) rotateX(30deg);
+        overflow: hidden;
+    }
+    
+    .text {
+        color: white;
+        /* grid-column: 2/3;
+grid-row: 2/2;*/
+        animation: trperspective(350px)ansl 5s linear 1s infinite forward;
+        margin: auto;
+        text-align: center;
+        width: 500px;
+        overflow: hidden;
+    }
+    
+    @keyframes transl {
+        0% {
+            transform: translate3d(0);
         }
-        
-        .conteneur {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1 fr);
-            align-content: center;
+        50% {
+            transform: translate3d(42px, -62px, -135px);
         }
-        
-        .text {
-            color: white;
-            grid-column: 2/3;
-            grid-row: 2/2;
-            transform: rotate3d(1, 0, 0, 60deg);
-            animation-duration: 4s;
-            animation-name: 3dim;
-            /*animation-iteration-count: infinite;
-            /*animation-duration: 10s;
-            animation-name: translate3d;
-            color: red;*/
+        100% {
+            transform: translate3d(-2.7rem, 0, 1rem);
         }
-        
-        @keyframes 3dim {
-            from {
-                transform: translate3d(0px, 10px, 10px);
-            }
-            75% {
-                transform: translate3d(0px, 100px, 200px);
-            }
-            to {
-                transform: translate3d(0px, 300px, 500px);
-            }
-        }
-        /*from {
-                margin-left: 100%;
-                width: 300%;
-            }
-            75% {
-                font-size: 300%;
-                margin-left: 25%;
-                width: 150%;
-            }
-            to {
-                margin-left: 0%;
-                width: 100%;
-            }*/
