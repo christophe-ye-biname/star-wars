@@ -1,17 +1,49 @@
-body {
-    background-image: url(space.png);
-    opacity: 1;
-}
-
-.conteneur {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    align-content: center;
-}
-
-h6 {
-    color: white;
-    grid-column: 2/2;
-    grid-row: 2/2;
-}
+        body {
+            background-image: url(space.png);
+            opacity: 1;
+        }
+        
+        .conteneur {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1 fr);
+            align-content: center;
+        }
+        
+        .text {
+            color: white;
+            grid-column: 2/3;
+            grid-row: 2/2;
+            transform: rotate3d(1, 0, 0, 60deg);
+            animation-duration: 4s;
+            animation-name: 3dim;
+            /*animation-iteration-count: infinite;
+            /*animation-duration: 10s;
+            animation-name: translate3d;
+            color: red;*/
+        }
+        
+        @keyframes 3dim {
+            from {
+                transform: translate3d(0px, 10px, 10px);
+            }
+            75% {
+                transform: translate3d(0px, 100px, 200px);
+            }
+            to {
+                transform: translate3d(0px, 300px, 500px);
+            }
+        }
+        /*from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }*/
